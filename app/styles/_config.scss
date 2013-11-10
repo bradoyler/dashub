@@ -1,0 +1,44 @@
+// Set this to true to add support for IE 6.
+$legacy-support-for-ie6: false; // Override default set in Compass' Support partial.
+
+// Set this to true to add support for IE 7.
+$legacy-support-for-ie7: false; // Override default set in Compass' Support partial.
+
+// Set this to true to force CSS output to exactly match normalize.css.
+$strict-normalize: false;
+
+// The base font size.
+$base-font-size: 14px;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 21px;
+
+// The font sizes for h1-h6.
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: $base-line-height;
+
+// Font stacks
+$serif-font-stack: serif;
+$sans-font-stack: sans-serif;
+
+// The default font family.
+$base-font-family: $sans-font-stack;
+
+//Grid Settings
+
+// Colors
+$base-font-color: lighten(#000, 15);
+$normal-link-color: rgba(221, 68, 34, 1.0);
+$hover-link-color: lighten($normal-link-color, 10);
+$active-link-color: darken($normal-link-color, 10);
+$visited-link-color: lighten($normal-link-color, 0);
+$focus-link-color: lighten($normal-link-color, 0);
+$light-grey: lighten(#000, 50);
+$border-color: lighten(#000, 75);
