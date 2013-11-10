@@ -1,0 +1,11 @@
+<h4>All issues for repo <a href="https://github.com/bradoyler/gitflow/issues" target="blank">bradoyler/gitflow</a></h4>
+<table border="1" cellpadding="3">
+ <tr>
+ 	<th>#</th><th>title</th><th>label</th><th>milestone</th>
+ </tr>
+{{#each}}
+  <tr>
+     <td> {{number}} </td><td> {{title}} </td><td> {{labels.[0].name}}</td><td>{{milestone.title}}</td>
+  </tr>
+{{/each}}
+</table>
