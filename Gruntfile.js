@@ -75,11 +75,9 @@ module.exports = function(grunt) {
                      'createDistVersion'
                      ]);
 
-  grunt.registerTask('heroku', "Build and preview a minified & production-ready version of your app.", [
-                     'dist',
-                     'expressServer:dist:keepalive'
+  grunt.registerTask('heroku', "Build a minified & production-ready version of your app.", [
+                     'dist'
                      ]);
-
 
   // Default Task
   // ------------------
