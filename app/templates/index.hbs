@@ -1,11 +1,59 @@
 <h4>All issues for repo <a href="https://github.com/bradoyler/gitflow/issues" target="blank">bradoyler/gitflow</a></h4>
-<table border="1" cellpadding="3">
- <tr>
- 	<th>#</th><th>title</th><th>label</th><th>milestone</th>
- </tr>
-{{#each}}
-  <tr>
-     <td> {{number}} </td><td> {{title}} </td><td> {{labels.[0].name}}</td><td>{{milestone.title}}</td>
-  </tr>
-{{/each}}
-</table>
+<style type="text/css">
+ .card-issue {
+ 	background-color: #eee;
+ 	margin: 4px;
+ }
+
+ .card-issue-title {
+ 	margin: 3px;
+ }
+
+ .stream-milestone{
+ 	float: left;
+ 	max-width: 320px;
+ 	background-color: #ccc;
+ 	margin-left: 12px;
+ }
+
+ .stream-title {
+ 	margin: 6px;
+ }
+</style>
+
+<div class="stream-milestone">
+  <h4 class="stream-title">Backlog</h4>
+  {{#each}}
+    <div class="card-issue">
+       <div class="card-issue-number"> #{{number}} </div> 
+        <h5 class="card-issue-title"> {{title}} </h5>
+        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+    </div>
+  {{/each}}
+  <div>Create issue...</div>
+</div>
+
+<div class="stream-milestone">
+  <h4 class="stream-title">Current iteration</h4>
+  {{#each}}
+    <div class="card-issue">
+       <div class="card-issue-number"> #{{number}} </div> 
+        <h5 class="card-issue-title"> {{title}} </h5>
+        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+    </div>
+  {{/each}}
+  <div>Create issue...</div>
+</div>
+
+
+<div class="stream-milestone">
+  <h4 class="stream-title">Closed issues</h4>
+  {{#each}}
+    <div class="card-issue">
+       <div class="card-issue-number"> #{{number}} </div> 
+        <h5 class="card-issue-title"> {{title}} </h5>
+        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+    </div>
+  {{/each}}
+  <div>Create issue...</div>
+</div>
