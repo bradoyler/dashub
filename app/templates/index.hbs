@@ -23,7 +23,7 @@
 
 <div class="stream-milestone">
   <h4 class="stream-title">Backlog</h4>
-  {{#each}}
+  {{#each backlog}}
     <div class="card-issue">
        <div class="card-issue-number"> #{{number}} </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
@@ -35,7 +35,7 @@
 
 <div class="stream-milestone">
   <h4 class="stream-title">Current iteration</h4>
-  {{#each}}
+  {{#each currentsprint}}
     <div class="card-issue">
        <div class="card-issue-number"> #{{number}} </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
@@ -48,7 +48,7 @@
 
 <div class="stream-milestone">
   <h4 class="stream-title">Closed issues</h4>
-  {{#each}}
+  {{#each closed}}
     <div class="card-issue">
        <div class="card-issue-number"> #{{number}} </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
