@@ -10,8 +10,9 @@ var IndexController = Ember.ArrayController.extend({
      return this.get('content').filterProperty('milestone.number', 2);
   }.property('content.[]'),
 
-  closed: function() {
-     return this.content;
+  closedissues: function() {
+  //	console.log(this.get('content'));
+     return this.get('content');
   }.property('content.[]')
 
 

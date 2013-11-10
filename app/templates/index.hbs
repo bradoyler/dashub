@@ -19,6 +19,14 @@
  .stream-title {
  	margin: 6px;
  }
+
+ .card-issue-next{
+ 	float: right;
+ }
+
+ .card-issue-back{
+ 	float: left;
+ }
 </style>
 
 <div class="stream-milestone">
@@ -28,32 +36,35 @@
        <div class="card-issue-number"> #{{number}} </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
         <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+        <div class="card-issue-next"><a href="#next"> -> </a></div>
     </div>
   {{/each}}
-  <div>Create issue...</div>
+   <div class="stream-new-card"><a href="#">New [+]</a></div>
 </div>
 
 <div class="stream-milestone">
-  <h4 class="stream-title">Current iteration</h4>
+  <h4 class="stream-title">Current Sprint</h4>
   {{#each currentsprint}}
     <div class="card-issue">
        <div class="card-issue-number"> #{{number}} </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
         <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+       	<div class="card-issue-back"><a href="#next"> <- </a></div>
+        <div class="card-issue-next"><a href="#back"> -> </a></div>
     </div>
   {{/each}}
-  <div>Create issue...</div>
+   <div class="stream-new-card"><a href="#">New [+]</a></div>
 </div>
 
 
 <div class="stream-milestone">
   <h4 class="stream-title">Closed issues</h4>
-  {{#each closed}}
+  {{#each closedissues}}
     <div class="card-issue">
        <div class="card-issue-number"> #{{number}} </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
         <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+        <div class="card-issue-back"><a href="#back"> <- </a></div>
     </div>
   {{/each}}
-  <div>Create issue...</div>
 </div>
