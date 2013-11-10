@@ -1,0 +1,16 @@
+@keyframes domChanged {
+  from {
+    background: yellow;
+  }
+}
+
+@-webkit-keyframes domChanged {
+  from {
+    background: yellow;
+  }
+}
+
+.ember-view {
+  animation: domChanged 1s;
+  -webkit-animation: domChanged 1s;
+}
