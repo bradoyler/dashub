@@ -19,4 +19,6 @@ Ember.RSVP.configure('onerror', function(error) {
   }
 });
 
+// App.initialize base64 here?
+
 export default App;
