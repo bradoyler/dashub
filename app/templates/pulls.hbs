@@ -1,0 +1,11 @@
+<div class="stream-milestone">
+  <h4 class="stream-title">Pull Requests</h4>
+  {{#each}}
+    <div class="card-issue">
+      <div class="card-issue-number"><a {{bind-attr href=html_url}} target="blank"> #{{number}} </a> </div> 
+        <h5 class="card-issue-title"> {{title}} </h5>
+        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+    </div>
+  {{/each}}
+   <div class="stream-new-card"><a href="#">New [+]</a></div>
+</div>

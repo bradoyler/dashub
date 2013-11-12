@@ -28,43 +28,34 @@
  	float: left;
  }
 </style>
+ {{input type="text" value=repoName placeholder="Enter Github repo" size="40"}} 
+ {{input type="button" value="Save"}}
 
+ <span> (ie. bradoyler/gitflow) </span> <br>
+
+ {{log this}}
+{{#unless this.content}}
+
+  <h2>Login</h2>
+   {{input type="text" value=userName placeholder="Github username\email" size="40"}} <br>
+   {{input type="password" value=password size="40"}}<br>
+   {{input type="button" value="Login"}}
+{{else}}
+  
 <div class="stream-milestone">
-  <h4 class="stream-title">Backlog</h4>
-  {{#each backlog}}
+  <h4 class="stream-title">Open Issues</h4>
+  {{#each}}
     <div class="card-issue">
-       <div class="card-issue-number"> #{{number}} </div> 
+       <div class="card-issue-number"><a {{bind-attr href=html_url}} target="blank"> #{{number}} </a> </div> 
         <h5 class="card-issue-title"> {{title}} </h5>
         <span>[{{labels.[0].name}} {{milestone.title}}]</span>
-        <div class="card-issue-next"><a href="#"> -> </a></div>
     </div>
   {{/each}}
    <div class="stream-new-card"><a href="#">New [+]</a></div>
 </div>
 
-<div class="stream-milestone">
-  <h4 class="stream-title">Current Sprint</h4>
-  {{#each currentsprint}}
-    <div class="card-issue">
-       <div class="card-issue-number"> #{{number}} </div> 
-        <h5 class="card-issue-title"> {{title}} </h5>
-        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
-       	<div class="card-issue-back"><a href="#"> <- </a></div>
-        <div class="card-issue-next"><a href="#"> -> </a></div>
-    </div>
-  {{/each}}
-   <div class="stream-new-card"><a href="#">New [+]</a></div>
-</div>
+ {{render pulls}}
 
+  {{render closedissues}}
 
-<div class="stream-milestone">
-  <h4 class="stream-title">Closed issues</h4>
-  {{#each closedissues}}
-    <div class="card-issue">
-       <div class="card-issue-number"> #{{number}} </div> 
-        <h5 class="card-issue-title"> {{title}} </h5>
-        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
-        <div class="card-issue-back"><a href="#"> <- </a></div>
-    </div>
-  {{/each}}
-</div>
+{{/unless}}
