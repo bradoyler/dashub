@@ -1,3 +1,4 @@
+
 var IndexController = Ember.ArrayController.extend({
 	content: [],
 
@@ -53,5 +54,4 @@ var IndexController = Ember.ArrayController.extend({
 
 });
 
-export
-default IndexController;
+export default IndexController;
