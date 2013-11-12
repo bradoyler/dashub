@@ -1,45 +1,56 @@
-<h4>All issues for repo <a href="https://github.com/bradoyler/gitflow/issues" target="blank">bradoyler/gitflow</a></h4>
 <style type="text/css">
  .card-issue {
- 	background-color: #eee;
- 	margin: 4px;
+  background-color: #eee;
+  margin: 4px;
  }
 
  .card-issue-title {
- 	margin: 3px;
+  margin: 3px;
  }
 
  .stream-milestone{
- 	float: left;
- 	max-width: 320px;
- 	background-color: #ccc;
- 	margin-left: 12px;
+  float: left;
+  max-width: 320px;
+  background-color: #ccc;
+  margin-left: 12px;
  }
 
  .stream-title {
- 	margin: 6px;
+  margin: 6px;
  }
 
  .card-issue-next{
- 	float: right;
+  float: right;
  }
 
  .card-issue-back{
- 	float: left;
+  float: left;
  }
 </style>
- {{input type="text" value=repoName placeholder="Enter Github repo" size="40"}} 
- {{input type="button" value="Save"}}
 
- <span> (ie. bradoyler/gitflow) </span> <br>
+{{#if username}}
+<div>Welcome {{username}}
+ <button {{action 'logout'}}> Logout</button>
+</div>
+{{/if}}
+<h4>All issues for repo <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a></h4>
 
- {{log this}}
+{{#unless reposet}}
+ {{input type="text" value=reponame placeholder="Enter Github repo" size="40"}} 
+  <button {{action 'save'}}>Save</button>
+  <span> (ie. bradoyler/gitflow) </span> <br>
+{{else}}
+  <h3> Repo: {{reponame}} 
+       <button {{action 'resetrepo'}}>Change</button>
+  </h3>
+{{/unless}}
+
 {{#unless this.content}}
 
   <h2>Login</h2>
-   {{input type="text" value=userName placeholder="Github username\email" size="40"}} <br>
+   {{input type="text" value=username placeholder="Github username\email" size="40"}} <br>
    {{input type="password" value=password size="40"}}<br>
-   {{input type="button" value="Login"}}
+   <button {{action 'login'}}>Login</button>
 {{else}}
   
 <div class="stream-milestone">
@@ -51,7 +62,7 @@
         <span>[{{labels.[0].name}} {{milestone.title}}]</span>
     </div>
   {{/each}}
-   <div class="stream-new-card"><a href="#">New [+]</a></div>
+   <div class="stream-new-card"><a href="#" target="blank">New [+]</a></div>
 </div>
 
  {{render pulls}}

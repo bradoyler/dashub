@@ -5,13 +5,16 @@ import ajax from 'appkit/utils/ajax';
 var IndexRoute = Ember.Route.extend({
   content:[],
 
-   setupController: function(controller, model) {  
+  setupController: function(controller, model) {  
 
    	    //controller.set('model', model);
 
-        var baseurl = 'https://api.github.com/repos/nbcnews/nbcnews.com/';
+        var baseurl = 'https://api.github.com/repos/'+ $.cookie('reponame') +'/';
         var self = this;
-        
+        var authtoken = $.cookie('authtoken');
+
+        console.log("authtoken:", authtoken);
+    if(authtoken){
         getJSON(baseurl+'issues')
         .then(function(data) {
         	self.controller.set('content', data);
@@ -26,6 +29,7 @@ var IndexRoute = Ember.Route.extend({
         .then(function(data) {
         	self.controllerFor('closedissues').set('content', data);
         });
+    }
   }
 
 });
