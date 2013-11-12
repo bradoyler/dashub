@@ -27,7 +27,7 @@
   "nonew": false,
   "nomen": false,
   "onevar": false,
-  "plusplus": false,
+  "plusplus": true,
   "regexp": false,
   "undef": true,
   "sub": true,
