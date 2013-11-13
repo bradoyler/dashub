@@ -26,8 +26,10 @@
 <section>
   <h3>Open Issues</h3>
   {{#each}}
+<<<<<<< HEAD
     <div class="card">
         <a class="issue-number" {{bind-attr href=html_url}} target="blank"> #{{number}} </a>
+        updated {{format-date updated_at}}
         <h6><i></i> {{title}} </h6>
         <p class="meta"><a href="#">@ianrose</a></p>
         <span class="label">{{labels.[0].name}} {{milestone.title}}</span>
