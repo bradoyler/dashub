@@ -2,10 +2,6 @@
 var IndexController = Ember.ArrayController.extend({
 	content: [],
 
-	reposet: function() {
-		return $.cookie('reponame');
-	}.property(),
-
 	reponame: function() {
 		return $.cookie('reponame');
 	}.property(),

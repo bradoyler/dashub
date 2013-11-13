@@ -1,8 +1,17 @@
 <h3>
-	{{#link-to 'index'}} Back {{/link-to}}
+    {{#link-to 'index'}} Back {{/link-to}}
 </h3>
 
-{{input type="text" value=reponame placeholder="Enter Github repo" size="40"}} 
-  <button {{action 'save'}}>Save</button>
-  <span> (ie. bradoyler/gitflow) </span> 
+<div>
+    <h3>Set your repo</h3>
+    {{input type="text" value=reponame placeholder="Enter Github repo" size="40"}} 
+    <button {{action 'save'}}>Save</button>
+    <span> (ie. bradoyler/gitflow) </span> 
+</div>
 
+<div>
+  <h3>Milestones</h3>
+  <ul>
+      <li> Dec 7 - Milestone </li>
+  </ul>
+</div>

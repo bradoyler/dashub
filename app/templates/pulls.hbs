@@ -1,15 +1,7 @@
 <section class="stream">
   <h3>Pull Requests</h3>
   {{#each}}
-    <div class="card">
-      <a class="issue-number" {{bind-attr href=html_url}} target="blank"> #{{number}} </a>
-      <time class="meta">updated {{format-date updated_at}}</time>
-      <h6><i></i> {{title}} </h6>
-      <p class="meta"><a href="#">@ianrose</a></p>
-      <span class="label">{{labels.[0].name}} {{milestone.title}}</span>
-      <span class="meta"><i></i>5</span>
-      <span class="meta"><i></i>#999</span>
-    </div>
+   {{render issuecard this}}
   {{/each}}
   <div class="stream-new-card"><a href="#">New [+]</a></div>
 </section>
