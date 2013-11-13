@@ -1,19 +1,24 @@
 button, .button {
-  font-family: $sans-font-stack;
+  display: inline-block;
+  margin-bottom: 0;
   font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
+  font-size: $base-font-size;
+  text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  overflow: hidden;
-  background-color: $base-border-color;
-  padding: 0 $base-line-height;
-  font-size: $base-font-size;
-  color: $base-font-color;
-  border: $base-border-width solid $base-border-color;
-  height: $button-height;
-  line-height: $button-height;
-  display: inline-block;
+  background-image: none;
+  border: $base-border-width solid transparent;
+  white-space: nowrap;
+  padding: $base-line-height $base-line-height;
+  padding-top: $base-line-height - $base-border-width;
+  padding-bottom: $base-line-height - $base-border-width;
+  padding-right: $base-line-height;
+  padding-left: $base-line-height;
+  line-height: $base-line-height * 3;
   border-radius: $base-border-radius;
-  @include link-colors(white, white, white, white, white);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }

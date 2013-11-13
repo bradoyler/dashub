@@ -3,7 +3,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  line-height: $base-line-height * 3;
+  line-height: $base-line-height * 4;
   font-size: $base-font-size;
   color: $base-font-color;
 }
@@ -14,48 +14,52 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, select {
-  margin-bottom: 6px;
+  margin-bottom: $base-line-height * 2;
 }
 
 h1, .h1 {
   font-size: 40px;
-  line-height: 48px;
+  line-height: $base-line-height * 8;
 }
 
 h2, .h2 {
   font-size: 40px;
-  line-height: 48px;
+  line-height: $base-line-height * 8;
 }
 
 h3, .h3 {
   font-size: 26px;
-  line-height: 36px;
+  line-height: $base-line-height * 6;
 }
 
 h4, .h4 {
   font-size: 18px;
-  line-height: 30px;
+  line-height: $base-line-height * 5;
 }
 
 h5, .h5 {
   font-size: 18px;
-  line-height: 30px;
+  line-height: $base-line-height * 5;
 }
 
 h6, .h6 {
   font-size: 15px;
-  line-height: 24px;
+  line-height: $base-line-height * 4;
 }
 
 p, .p {
   max-width: 550px;
   font-size: 15px;
-  line-height: 24px;
+  line-height: $base-line-height * 4;
 }
 
 small, .meta {
   font-size: 13px;
-  line-height: 24px;
+  line-height: $base-line-height * 3;
+}
+
+button, input, select, textarea {
+  font-family: $base-font-family;
 }
 
 input, select {
