@@ -8,6 +8,11 @@ body {
   color: $base-font-color;
 }
 
+.container {
+  margin:auto; 
+  max-width:1299px;
+}
+
 h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, select {
   margin-bottom: 6px;
 }

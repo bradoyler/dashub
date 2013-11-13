@@ -5,13 +5,13 @@
 {{/if}}
 
 {{#if reponame}}
-  <h4>
-    Dashboard for <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
-     {{#link-to 'settings' class='button'}}Change{{/link-to}}
-  </h4>
+<h4>
+  Dashboard for <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
+  {{#link-to 'settings' class='button'}}Change{{/link-to}}
+</h4>
 {{else}}
-  {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
-  <button class="button">Set Repo</button>
+{{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
+<button class="button">Set Repo</button>
 {{/if}}
 
 {{#unless this.content}}
@@ -20,17 +20,16 @@
 </h2>
 
 {{else}}
-  
+
 <section>
   <h3>Open Issues</h3>
   {{#each}}
-      {{render issuecard this}}
+  {{render issuecard this}}
   {{/each}}
-   <div><a href="#" target="blank">New [+]</a></div>
+  <div><a href="#" target="blank">New [+]</a></div>
 </section>
 
- {{render pulls}}
-
-  {{render closedissues}}
+{{render pulls}}
+{{render closedissues}}
 
 {{/unless}}
