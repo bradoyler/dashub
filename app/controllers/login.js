@@ -9,7 +9,9 @@ var LoginController = Ember.Controller.extend({
 
 			$.cookie.raw = true;
 			$.cookie('authtoken', encoded);
+			this.set('authtoken', encoded);
 			$.cookie('username', username);
+			this.set('username', username);
 
 			this.transitionToRoute('index');
 

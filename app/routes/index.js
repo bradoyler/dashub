@@ -3,19 +3,26 @@ import getJSON from 'appkit/utils/get_json';
 import ajax from 'appkit/utils/ajax';
 
 var IndexRoute = Ember.Route.extend({
-	content: [],
 
 	setupController: function(controller, model) {
         console.log('##setupController##');
 
-		var baseurl = 'https://api.github.com/repos/' + $.cookie('reponame') + '/';
-		var self = this;
-		var authtoken = $.cookie('authtoken');
+        var authtoken = $.cookie('authtoken');
+        this.controller.set('authtoken', authtoken);
 
-		if (authtoken) {
+        var username = $.cookie('username');
+        this.controller.set('username', username);
+
+        var reponame = $.cookie('reponame');
+        this.controller.set('reponame', reponame);
+		
+		var baseurl = 'https://api.github.com/repos/' + reponame + '/';
+		var self = this;
+		
+		if (authtoken && reponame) {
 			getJSON(baseurl + 'issues?sort=updated')
 				.then(function(data) {
-					self.controller.set('content', data);
+					self.controllerFor('openissues').set('content', data);
 				});
 
 			getJSON(baseurl + 'pulls?sort=updated&direction=desc')
