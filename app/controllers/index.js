@@ -1,10 +1,10 @@
 
-var IndexController = Ember.ArrayController.extend({
+var IndexController = Ember.Controller.extend({
 	content: [],
 
 	reponame: function() {
 		return $.cookie('reponame');
-	}.property(),
+	}.property('reponame'),
 
 	repourl: function() {
 		return 'https://github.com/' + this.get('reponame') + '/issues';
@@ -12,13 +12,11 @@ var IndexController = Ember.ArrayController.extend({
 
 	authtoken: function() {
 		return $.cookie('authtoken');
-	}.property(),
+	}.property('authtoken'),
 
 	username: function() {
 		return $.cookie('username');
-	}.property('username'),
-
-	
+	}.property('username')
 
 });
 
