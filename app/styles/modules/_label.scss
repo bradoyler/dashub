@@ -1,0 +1,10 @@
+.label {
+  background-color: #cfddf3;
+  border-radius: $base-border-radius;
+  display: inline-block;
+  font-weight: bolder;
+  padding-right: 4px;
+  padding-left: 4px;
+  font-size: 11px; // Same font-size as GitHub's labels
+  line-height: $base-line-height * 3;
+}

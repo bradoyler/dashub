@@ -4,10 +4,16 @@
 // ------------------------------------------------
 // Vendor
 
+// Yours
+@import "mixins/mixins";
 
 // Global config variables, color palette, type, etc
 // ------------------------------------------------
 @import "config";
+
+// Reset
+// ------------------------------------------------
+@import "resets/reset";
 
 // Vendor CSS Libraries (i.e. they actually output styles)
 // ------------------------------------------------
@@ -15,8 +21,10 @@
 
 // Base element styles
 // ------------------------------------------------
-@import "resets/reset";
 @import "base/base";
 
 // Modules
 // ------------------------------------------------
+@import "modules/label";
+@import "modules/issue-number";
+@import "modules/card";

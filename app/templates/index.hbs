@@ -23,17 +23,20 @@
    <button {{action 'login'}}>Login</button>
 {{else}}
   
-<div class="stream-milestone">
-  <h4 class="stream-title">Open Issues</h4>
+<section>
+  <h3>Open Issues</h3>
   {{#each}}
-    <div class="card-issue">
-       <div class="card-issue-number"><a {{bind-attr href=html_url}} target="blank"> #{{number}} </a> </div> 
-        <h5 class="card-issue-title"> {{title}} </h5>
-        <span>[{{labels.[0].name}} {{milestone.title}}]</span>
+    <div class="card">
+        <a class="issue-number" {{bind-attr href=html_url}} target="blank"> #{{number}} </a>
+        <h6><i></i> {{title}} </h6>
+        <p class="meta"><a href="#">@ianrose</a></p>
+        <span class="label">{{labels.[0].name}} {{milestone.title}}</span>
+        <span class="meta"><i></i>5</span>
+        <span class="meta"><i></i>#999</span>
     </div>
   {{/each}}
-   <div class="stream-new-card"><a href="#" target="blank">New [+]</a></div>
-</div>
+   <div><a href="#" target="blank">New [+]</a></div>
+</section>
 
  {{render pulls}}
 

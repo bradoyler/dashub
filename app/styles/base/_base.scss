@@ -1,12 +1,5 @@
-$base-line-height: 6px;
-$base-font-size: 15px;
-$base-border-color: black;
-$base-border-width: 1px;
-
 body {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-family: $sans-font-stack;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -54,9 +47,18 @@ p, .p {
   line-height: 24px;
 }
 
+small, .meta {
+  font-size: 13px;
+  line-height: 24px;
+}
+
 button, input, select {
   height: $base-line-height * 5;
   font-size: $base-font-size;
   background-color: white;
   border: $base-border-width solid $base-border-color;
+}
+
+a {
+  @include link-colors($normal-link-color, $hover-link-color, $active-link-color, $visited-link-color, $focus-link-color);
 }
