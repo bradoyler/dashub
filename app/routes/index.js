@@ -7,13 +7,11 @@ var IndexRoute = Ember.Route.extend({
 
 	setupController: function(controller, model) {
         console.log('##setupController##');
-		//controller.set('model', model);
 
 		var baseurl = 'https://api.github.com/repos/' + $.cookie('reponame') + '/';
 		var self = this;
 		var authtoken = $.cookie('authtoken');
 
-		console.log("authtoken:", authtoken);
 		if (authtoken) {
 			getJSON(baseurl + 'issues?sort=updated')
 				.then(function(data) {
