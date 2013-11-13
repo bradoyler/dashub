@@ -3,24 +3,21 @@
  <button {{action 'logout'}}> Logout</button>
 </div>
 {{/if}}
-<h4>All issues for repo <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a></h4>
 
-{{#unless reposet}}
- {{input type="text" value=reponame placeholder="Enter Github repo" size="40"}} 
-  <button {{action 'save'}}>Save</button>
-  <span> (ie. bradoyler/gitflow) </span> <br>
+{{#if reposet}}
+  <h4>
+    Dashboard for <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
+     {{#link-to 'settings'}}Change{{/link-to}}
+  </h4>
 {{else}}
-  <h3> Repo: {{reponame}} 
-       <button {{action 'resetrepo'}}>Change</button>
-  </h3>
-{{/unless}}
+  {{#link-to 'settings'}}Set Repo{{/link-to}}
+{{/if}}
 
 {{#unless this.content}}
+<h2>
+  {{#link-to 'login'}}Login{{/link-to}}
+</h2>
 
-  <h2>Login</h2>
-   {{input type="text" value=username placeholder="Github username\email" size="40"}}
-   {{input type="password" value=password placeholder="Password" size="40"}}
-   <button {{action 'login'}}>Login</button>
 {{else}}
   
 <section>

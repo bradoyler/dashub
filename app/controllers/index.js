@@ -20,35 +20,13 @@ var IndexController = Ember.ArrayController.extend({
 
 	username: function() {
 		return $.cookie('username');
-	}.property(),
+	}.property('username'),
 
 	actions: {
-		login: function() {
-			var username = this.get('username') || '';
-			var password = this.get('password') || '';
-			var encoded = window.base64.encode(username + ":" + password);
-			console.log('login', encoded);
-
-			$.cookie.raw = true;
-			$.cookie('authtoken', encoded);
-			$.cookie('username', username);
-
-		},
-		save: function() {
-			var repo = this.get('reponame');
-			$.cookie('reponame', repo);
-			this.set('reposet', true);
-			console.log('save', repo);
-		},
-
-		resetrepo: function() {
-			$.cookie('reponame', '');
-			this.set('reposet', false);
-		},
-
 		logout: function() {
 			$.removeCookie('authtoken');
 			$.removeCookie('username');
+			this.transitionToRoute('login');
 		}
 	}
 

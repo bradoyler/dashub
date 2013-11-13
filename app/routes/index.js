@@ -6,7 +6,7 @@ var IndexRoute = Ember.Route.extend({
 	content: [],
 
 	setupController: function(controller, model) {
-
+        console.log('##setupController##');
 		//controller.set('model', model);
 
 		var baseurl = 'https://api.github.com/repos/' + $.cookie('reponame') + '/';
