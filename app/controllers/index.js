@@ -23,6 +23,11 @@ var IndexController = Ember.ArrayController.extend({
 			$.removeCookie('authtoken');
 			$.removeCookie('username');
 			this.transitionToRoute('login');
+		},
+
+		refresh: function() {
+			console.log('## refresh')
+			this.init();
 		}
 	}
 

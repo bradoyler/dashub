@@ -27,6 +27,7 @@ return new Ember.RSVP.Promise(function(resolve, reject){
         xhr.then = null;
         Ember.run(null, reject, xhr);
       } else {
+        console.log('## ajax', args.url);
         Ember.run(null, resolve, json);
       }
     }, function(xhr) {

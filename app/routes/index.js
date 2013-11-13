@@ -15,7 +15,7 @@ var IndexRoute = Ember.Route.extend({
 
 		console.log("authtoken:", authtoken);
 		if (authtoken) {
-			getJSON(baseurl + 'issues')
+			getJSON(baseurl + 'issues?sort=updated')
 				.then(function(data) {
 					self.controller.set('content', data);
 				});
