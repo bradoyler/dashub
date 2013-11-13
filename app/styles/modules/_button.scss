@@ -1,0 +1,19 @@
+button, .button {
+  font-family: $sans-font-stack;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: $base-border-color;
+  padding: 0 $base-line-height;
+  font-size: $base-font-size;
+  color: $base-font-color;
+  border: $base-border-width solid $base-border-color;
+  height: $button-height;
+  line-height: $button-height;
+  display: inline-block;
+  border-radius: $base-border-radius;
+  @include link-colors(white, white, white, white, white);
+}

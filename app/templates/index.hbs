@@ -7,15 +7,16 @@
 {{#if reposet}}
   <h4>
     Dashboard for <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
-     {{#link-to 'settings'}}Change{{/link-to}}
+     {{#link-to 'settings' bind-attr class='button'}}Change{{/link-to}}
   </h4>
 {{else}}
-  {{#link-to 'settings'}}Set Repo{{/link-to}}
+  {{#link-to 'settings' bind-attr class='button'}}Set Repo{{/link-to}}
+  <button class="button">Set Repo</button>
 {{/if}}
 
 {{#unless this.content}}
 <h2>
-  {{#link-to 'login'}}Login{{/link-to}}
+  {{#link-to 'login' bind-attr class='button'}}Login{{/link-to}}
 </h2>
 
 {{else}}

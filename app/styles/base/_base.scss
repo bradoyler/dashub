@@ -5,9 +5,10 @@ body {
   font-smoothing: antialiased;
   line-height: $base-line-height * 3;
   font-size: $base-font-size;
+  color: $base-font-color;
 }
 
-h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, button, input, select {
+h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, select {
   margin-bottom: 6px;
 }
 
@@ -52,7 +53,7 @@ small, .meta {
   line-height: 24px;
 }
 
-button, input, select {
+input, select {
   height: $base-line-height * 5;
   font-size: $base-font-size;
   background-color: white;

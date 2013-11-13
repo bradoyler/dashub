@@ -1,6 +1,6 @@
 $base-line-height: 6px;
 $base-font-size: 15px;
-$base-border-color: black;
+$base-border-color: lighten(#000, 30);
 $base-border-width: 1px;
 $base-border-radius: 2px;
 
@@ -22,3 +22,6 @@ $visited-link-color: lighten($normal-link-color, 0);
 $focus-link-color: lighten($normal-link-color, 0);
 $light-grey: lighten(#000, 50);
 $border-color: lighten(#000, 75);
+
+//Modules
+$button-height: $base-line-height * 5;
