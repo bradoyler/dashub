@@ -1,33 +1,3 @@
-<style type="text/css">
- .card-issue {
-  background-color: #eee;
-  margin: 4px;
- }
-
- .card-issue-title {
-  margin: 3px;
- }
-
- .stream-milestone{
-  float: left;
-  max-width: 320px;
-  background-color: #ccc;
-  margin-left: 12px;
- }
-
- .stream-title {
-  margin: 6px;
- }
-
- .card-issue-next{
-  float: right;
- }
-
- .card-issue-back{
-  float: left;
- }
-</style>
-
 {{#if username}}
 <div>Welcome {{username}}
  <button {{action 'logout'}}> Logout</button>
@@ -48,8 +18,8 @@
 {{#unless this.content}}
 
   <h2>Login</h2>
-   {{input type="text" value=username placeholder="Github username\email" size="40"}} <br>
-   {{input type="password" value=password size="40"}}<br>
+   {{input type="text" value=username placeholder="Github username\email" size="40"}}
+   {{input type="password" value=password placeholder="Password" size="40"}}
    <button {{action 'login'}}>Login</button>
 {{else}}
   

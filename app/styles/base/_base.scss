@@ -1,3 +1,62 @@
-html, body {
-  margin: 20px;
+$base-line-height: 6px;
+$base-font-size: 15px;
+$base-border-color: black;
+$base-border-width: 1px;
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  line-height: $base-line-height * 3;
+  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, button, input, select {
+  margin-bottom: 6px;
+}
+
+h1, .h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h2, .h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3, .h3 {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+h4, .h4 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+h5, .h5 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+h6, .h6 {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+p, .p {
+  max-width: 550px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+button, input, select {
+  height: $base-line-height * 5;
+  font-size: $base-font-size;
+  background-color: white;
+  border: $base-border-width solid $base-border-color;
 }

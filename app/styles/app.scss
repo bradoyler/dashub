@@ -3,10 +3,7 @@
 // Mixin & Function Libraries
 // ------------------------------------------------
 // Vendor
-@import "compass/utilities";
-@import "compass/support";
-@import "compass/css3/box-sizing";
-@import "compass/typography";
+
 
 // Global config variables, color palette, type, etc
 // ------------------------------------------------
@@ -15,10 +12,10 @@
 // Vendor CSS Libraries (i.e. they actually output styles)
 // ------------------------------------------------
 @import "vendor/eak";
-@import "../../vendor/normalize.scss/normalize";
 
 // Base element styles
 // ------------------------------------------------
+@import "resets/reset";
 @import "base/base";
 
 // Modules
