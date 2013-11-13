@@ -18,18 +18,7 @@ var IndexController = Ember.ArrayController.extend({
 		return $.cookie('username');
 	}.property('username'),
 
-	actions: {
-		logout: function() {
-			$.removeCookie('authtoken');
-			$.removeCookie('username');
-			this.transitionToRoute('login');
-		},
-
-		refresh: function() {
-			console.log('## refresh')
-			this.init();
-		}
-	}
+	
 
 });
 

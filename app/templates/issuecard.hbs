@@ -2,7 +2,10 @@
       <a class="issue-number" {{bind-attr href=html_url}} target="blank"> #{{number}} </a>
       <time class="meta">updated {{format-date updated_at}}</time>
       <h6><i></i> {{title}} </h6>
-      <p class="meta"><a href="#">@ianrose</a></p>
+      <p class="meta">
+      	<img {{bind-attr src=user.avatar_url}} height='30'>  
+      	<a {{bind-attr href=user.url}}>@{{user.login}}</a>       
+      </p>
       <span class="label">{{labels.[0].name}} {{milestone.title}}</span>
       <span class="meta"><i></i>{{comments}}</span>
       <span class="meta"><i></i>PR #999</span>

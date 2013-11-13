@@ -28,7 +28,21 @@ var IndexRoute = Ember.Route.extend({
 					self.controllerFor('closedissues').set('content', data);
 				});
 		}
+	},
+
+	actions: {
+		logout: function() {
+			$.removeCookie('authtoken');
+			$.removeCookie('username');
+			this.transitionTo('login');
+		},
+
+		refresh: function() {
+			console.log('## refresh');
+			this.init();
+		}
 	}
+
 
 });
 
