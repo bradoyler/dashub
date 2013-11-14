@@ -1,8 +1,5 @@
 body {
   font-family: $sans-font-stack;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   line-height: $base-line-height * 4;
   font-size: $base-font-size;
   color: $base-font-color;
@@ -58,17 +55,41 @@ small, .meta {
   line-height: $base-line-height * 3;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: $base-font-family;
+  border: $base-border-width solid $base-border-color;
+  background-color: white;
 }
 
-input, select {
+input[type="text"],
+input[type="password"],
+select {
   height: $base-line-height * 5;
   font-size: $base-font-size;
-  background-color: white;
-  border: $base-border-width solid $base-border-color;
 }
 
 a {
   @include link-colors($normal-link-color, $hover-link-color, $active-link-color, $visited-link-color, $focus-link-color);
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-top: ($base-line-height * 2) - $base-border-width;
+  border: 0;
+  border-top: $base-border-width solid $base-border-color;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: $base-line-height;
+}
+
+fieldset {
+  padding-top: $base-line-height - $base-border-width;
+  padding-bottom: $base-line-height - $base-border-width;
+  border: $base-border-width solid $base-border-color;
 }
