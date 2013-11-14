@@ -8,13 +8,9 @@ var IndexRoute = Ember.Route.extend({
         console.log('##setupController##');
 
         var authtoken = $.cookie('authtoken');
-        this.controller.set('authtoken', authtoken);
-
         var username = $.cookie('username');
-        this.controller.set('username', username);
-
         var reponame = $.cookie('reponame');
-        this.controller.set('reponame', reponame);
+        this.controller.setProperties({reponame: reponame, username: username, authtoken: authtoken});
 		
 		var baseurl = 'https://api.github.com/repos/' + reponame + '/';
 		var self = this;
@@ -23,6 +19,7 @@ var IndexRoute = Ember.Route.extend({
 			getJSON(baseurl + 'issues?sort=updated')
 				.then(function(data) {
 					self.controllerFor('openissues').set('content', data);
+					self.controllerFor('openissues').set('allissues', data);
 				});
 
 			getJSON(baseurl + 'pulls?sort=updated&direction=desc')
@@ -33,6 +30,7 @@ var IndexRoute = Ember.Route.extend({
 			getJSON(baseurl + 'issues?state=closed&sort=updated')
 				.then(function(data) {
 					self.controllerFor('closedissues').set('content', data);
+					self.controllerFor('closedissues').set('allissues', data);
 				});
 		}
 	},
