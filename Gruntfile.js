@@ -75,8 +75,9 @@ module.exports = function(grunt) {
                      'createDistVersion'
                      ]);
 
-  grunt.registerTask('heroku', "Build a minified & production-ready version of your app.", [
-                     'dist'
+  grunt.registerTask('ghpages', "Build a minified & production-ready version of your app.", [
+                     'dist',
+                     'copy:ghpages'
                      ]);
 
   // Default Task

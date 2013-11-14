@@ -4,9 +4,17 @@
       <h6><i></i> {{title}} </h6>
       <p class="meta">
       	<img {{bind-attr src=user.avatar_url}} height='30'>  
-      	<a {{bind-attr href=user.url}}>@{{user.login}}</a>       
+      	<a {{bind-attr href='user.url'}}>@{{user.login}}</a>     
+            {{#if assignee}}
+              => {{assignee.login}}
+            {{/if}}  
       </p>
       <span class="label">{{labels.[0].name}} {{milestone.title}}</span>
       <span class="meta"><i></i>{{comments}}</span>
-      <span class="meta"><i></i>PR #999</span>
+
+      {{#if pull_request.html_url}}
+      <span class="meta"><i></i>
+            <a {{bind-attr href=pull_request.html_url}} target="blank">PR</a>
+      </span>
+      {{/if}}
 </div>
