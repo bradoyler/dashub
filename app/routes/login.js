@@ -1,5 +1,3 @@
-var LoginRoute = Ember.Route.extend({
- 
-});
+var LoginRoute = Ember.Route.extend({});
 
 export default LoginRoute;

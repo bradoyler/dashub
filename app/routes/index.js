@@ -1,20 +1,22 @@
-//import Issue from 'appkit/models/issue';
 import getJSON from 'appkit/utils/get_json';
-import ajax from 'appkit/utils/ajax';
 
 var IndexRoute = Ember.Route.extend({
 
 	setupController: function(controller, model) {
-        console.log('##setupController##');
+		console.log('##setupController##');
 
-        var authtoken = $.cookie('authtoken');
-        var username = $.cookie('username');
-        var reponame = $.cookie('reponame');
-        this.controller.setProperties({reponame: reponame, username: username, authtoken: authtoken});
-		
+		var authtoken = $.cookie('authtoken');
+		var username = $.cookie('username');
+		var reponame = $.cookie('reponame');
+		this.controller.setProperties({
+			reponame: reponame,
+			username: username,
+			authtoken: authtoken
+		});
+
 		var baseurl = 'https://api.github.com/repos/' + reponame + '/';
 		var self = this;
-		
+
 		if (authtoken && reponame) {
 			getJSON(baseurl + 'issues?sort=updated')
 				.then(function(data) {
@@ -47,8 +49,6 @@ var IndexRoute = Ember.Route.extend({
 			this.init();
 		}
 	}
-
-
 });
 
 export default IndexRoute;

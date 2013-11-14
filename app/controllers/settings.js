@@ -1,4 +1,4 @@
-var LoginController = Ember.Controller.extend({
+var SettingsController = Ember.Controller.extend({
 
 	reposet: function() {
 		return $.cookie('reponame');
@@ -26,4 +26,4 @@ var LoginController = Ember.Controller.extend({
 	}
 });
 
-export default LoginController;
+export default SettingsController;
