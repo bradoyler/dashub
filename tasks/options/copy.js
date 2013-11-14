@@ -65,4 +65,22 @@ module.exports = {
       dest: 'dist/'
     }]
   },
+
+  ghpages: {
+      files: [{
+      expand: true,
+      cwd: 'dist/assets',
+      src: ['*.{css,js}'],
+      filter: 'isFile',
+      dest: 'assets/'
+    },
+    {
+      expand: true,
+      cwd: 'dist/',
+      src: ['index.html'],
+      filter: 'isFile',
+      dest: ''
+    }]
+  }
+
 };
