@@ -8,10 +8,10 @@
       	<img class="avatar" {{bind-attr src=user.avatar_url}} height='30'>
       	<a {{bind-attr href='user.url'}}>@{{user.login}}</a>     
             {{#if assignee}}
-              =>  <a {{bind-attr href='assignee.url'}}>@{{assignee.login}}</a>
+              <small>assigned</small>  <a {{bind-attr href='assignee.url'}}>@{{assignee.login}}</a>
             {{/if}}  
       </p>
-      <span class="label">{{labels.[0].name}} {{milestone.title}}</span>
+      <span class="label">{{labels.[0].name}}</span> <span class="label">{{milestone.title}}</span>
       <span class="meta"><i></i>{{comments}}</span>
 
       {{#if pull_request.html_url}}

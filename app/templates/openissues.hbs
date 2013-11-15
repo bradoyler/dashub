@@ -1,10 +1,14 @@
 <div class="size1of3 unit">
 <section class="stream">
-  <h3>Open Issues <span class="badge">{{length}}</span></h3>
-  <a class="button" href="#" {{action 'filteryours'}}>Yours</a>
-  <a class="button" href="#" {{action 'getall'}}>All</a>
-  {{#each}}
-     {{render issuecard this}}
-  {{/each}}
+  <header class="stream-header">
+    <h3 class="h5">Open Issues <span class="badge">{{length}}</span></h3>
+    <a class="button" href="#" {{action 'filteryours'}}>Yours</a>
+    <a class="button" href="#" {{action 'getall'}}>All</a>
+  </header>
+  <div class="card-list">
+    {{#each}}
+      {{render issuecard this}}
+    {{/each}}
+  </div>
 </section>
 </div>
