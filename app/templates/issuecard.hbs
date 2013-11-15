@@ -3,7 +3,7 @@
       <time class="meta">updated {{format-date updated_at}}</time>
       <h6><i></i> {{title}} </h6>
       <p class="meta">
-      	<img {{bind-attr src=user.avatar_url}} height='30'>  
+      	<img class="avatar" {{bind-attr src=user.avatar_url}} height='30'>
       	<a {{bind-attr href='user.url'}}>@{{user.login}}</a>     
             {{#if assignee}}
               =>  <a {{bind-attr href='assignee.url'}}>@{{assignee.login}}</a>

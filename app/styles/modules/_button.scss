@@ -1,4 +1,4 @@
-button, .button {
+.button-txt {
   display: inline-block;
   margin-bottom: 0;
   font-weight: bold;
@@ -21,4 +21,11 @@ button, .button {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+.button, button {
+  @extend .button-txt;
+  background-color: gray;
+  @include link-colors(#fff, #fff, #fff, #fff, #fff);
+  text-decoration: none;
 }
