@@ -12,6 +12,8 @@ $sans-font-stack: sans-serif;
 $base-font-family: $sans-font-stack;
 
 //Grid Settings
+$default-grid-gutter-left: 10px;
+$default-grid-gutter-right: 10px;
 
 // Colors
 $base-font-color: lighten(#000, 15);
