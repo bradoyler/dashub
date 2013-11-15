@@ -1,6 +1,8 @@
  <div class="card">
-      <a class="issue-number" {{bind-attr href=html_url}} target="blank"> #{{number}} </a>
-      <time class="meta">updated {{format-date updated_at}}</time>
+   <div class="line">
+     <a class="issue-number" {{bind-attr href=html_url}} target="blank"> #{{number}} </a>
+     <time class="timestamp meta">{{format-date updated_at}}</time>
+   </div>
       <h6><i></i> {{title}} </h6>
       <p class="meta">
       	<img class="avatar" {{bind-attr src=user.avatar_url}} height='30'>
