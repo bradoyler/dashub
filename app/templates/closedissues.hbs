@@ -1,8 +1,10 @@
-<section class="stream">
-  <h3>Closed Issues <span style="font-size:smaller">({{length}})</span> 
-  	<span style="font-size:small;">Filter: <a href="#" {{action 'filteryours'}}>YOURS</a> / <a href="#" {{action 'getall'}}>ALL</a</span>
-  </h3>
-  {{#each}}
-     {{render issuecard this}}
-  {{/each}}
-</section>
+<div class="size1of3 lastUnit">
+  <section class="stream">
+    <h3>Closed Issues <span class="badge">{{length}}</span></h3>
+    <a class="button" href="#" {{action 'filteryours'}}>Yours</a>
+    <a class="button" href="#" {{action 'getall'}}>All</a>
+    {{#each}}
+      {{render issuecard this}}
+    {{/each}}
+  </section>
+</div>

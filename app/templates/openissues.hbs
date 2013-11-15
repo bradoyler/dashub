@@ -1,8 +1,10 @@
+<div class="size1of3 unit">
 <section class="stream">
-  <h3>Open Issues <span style="font-size:smaller">({{length}})</span> 
-  	<span style="font-size:small;">Filter: <a href="#" {{action 'filteryours'}}>YOURS</a> / <a href="#" {{action 'getall'}}>ALL</a></span>
-  </h3>
+  <h3>Open Issues <span class="badge">{{length}}</span></h3>
+  <a class="button" href="#" {{action 'filteryours'}}>Yours</a>
+  <a class="button" href="#" {{action 'getall'}}>All</a>
   {{#each}}
      {{render issuecard this}}
   {{/each}}
 </section>
+</div>
