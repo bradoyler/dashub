@@ -125,6 +125,10 @@
   max-width: inherit
 }
 
+.cap-width {
+  max-width: 33em;
+}
+
 @media screen and (max-width: 60em) {
   .size1of4, .size2of4, .size3of4, .size2of8, .size4of8, .size6of8 {
     width: 50%
@@ -146,6 +150,10 @@
 @media screen and (max-width: 40em) {
   .size1of2, .size1of3, .size2of3, .size1of4, .size2of4, .size3of4, .size2of8, .size3of8, .size4of8, .size5of8, .size6of8, .size7of8 {
     width: 100%
+  }
+
+  .cap-width {
+    max-width: none;
   }
 
   .size1of2.unit, .size1of3.unit, .size2of3.unit, .size1of4.unit, .size2of4.unit, .size3of4.unit, .size2of8.unit, .size3of8.unit, .size4of8.unit, .size5of8.unit, .size6of8.unit, .size7of8.unit, .size1of2.lastUnit, .size1of3.lastUnit, .size2of3.lastUnit, .size1of4.lastUnit, .size2of4.lastUnit, .size3of4.lastUnit, .size2of8.lastUnit, .size3of8.lastUnit, .size4of8.lastUnit, .size5of8.lastUnit, .size6of8.lastUnit, .size7of8.lastUnit {
