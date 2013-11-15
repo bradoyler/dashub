@@ -3,6 +3,7 @@ body {
   line-height: $base-line-height * 4;
   font-size: $base-font-size;
   color: $base-font-color;
+  margin: $default-grid-gutter-left;
 }
 
 h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, select {
