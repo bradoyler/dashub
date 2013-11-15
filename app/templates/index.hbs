@@ -12,13 +12,13 @@
 </h4>
 {{/if}}
 
-{{#if authtoken}}
+{{#if username}}
 	{{#unless reponame}}
 	  {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
 	{{/unless}}
 {{/if}}
 
- {{#unless authtoken}}
+ {{#unless username}}
 	<h2>
 	  {{#link-to 'login' class='button'}}Login{{/link-to}}
 	</h2>
