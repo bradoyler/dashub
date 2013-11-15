@@ -9,6 +9,11 @@ h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, selec
   margin-bottom: $base-line-height * 2;
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #555;
+  font-weight: bold;
+}
+
 h1, .h1 {
   font-size: 40px;
   line-height: $base-line-height * 8;
@@ -67,6 +72,7 @@ select {
 }
 
 a {
+  text-decoration: none;
   @include link-colors($normal-link-color, $hover-link-color, $active-link-color, $visited-link-color, $focus-link-color);
 }
 

@@ -1,6 +1,6 @@
 $base-line-height: 6px;
 $base-font-size: 15px;
-$base-border-color: lighten(#000, 30);
+$base-border-color: #E5E5E5;
 $base-border-width: 1px;
 $base-border-radius: 2px;
 
@@ -15,7 +15,7 @@ $base-font-family: $sans-font-stack;
 
 // Colors
 $base-font-color: lighten(#000, 15);
-$normal-link-color: #2e63b3;
+$normal-link-color: #4183C4;
 $hover-link-color: lighten($normal-link-color, 10);
 $active-link-color: darken($normal-link-color, 10);
 $visited-link-color: lighten($normal-link-color, 0);

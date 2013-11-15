@@ -1,8 +1,14 @@
 <div class="unit size1of3">
   <section class="stream">
-    <h3>Pull Requests</h3>
-    {{#each}}
-      {{render issuecard this}}
-    {{/each}}
+    <header class="stream-header">
+      <h3 class="h5">Pull Requests <span class="badge">{{length}}</span></h3>
+      <a class="button" href="#" {{action 'filteryours'}}>Yours</a>
+      <a class="button" href="#" {{action 'getall'}}>All</a>
+    </header>
+    <div class="card-list">
+      {{#each}}
+        {{render issuecard this}}
+      {{/each}}
+    </div>
   </section>
 </div>

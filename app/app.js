@@ -19,6 +19,20 @@ Ember.RSVP.configure('onerror', function(error) {
   }
 });
 
+Ember.View.reopen({
+  didInsertElement : function(){
+    this._super();
+    Ember.run.scheduleOnce('afterRender', this, this.afterRenderEvent);
+  },
+  afterRenderEvent : function(){
+    $(window).resize(function() {
+      $('.card-list').height($(window).height() - 250);
+    });
+
+    $(window).trigger('resize');
+  }
+});
+
 // App.initialize base64 here?
 
 export default App;
