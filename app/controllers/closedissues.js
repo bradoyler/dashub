@@ -1,8 +1,8 @@
 var ClosedissuesController = Ember.ArrayController.extend({
 	content: [],
 	allissues: [],
-	actions: {
-		filteryours: function() {
+
+	yours: function() {
 			var issues = this.get('content');
 			var username = $.cookie('username');
 
@@ -21,11 +21,16 @@ var ClosedissuesController = Ember.ArrayController.extend({
 				}
 			});
 
-			this.set('content', myissues);
+			return myissues;
+
+	}.property('content.[]'),
+
+	actions: {
+		filteryours: function() {
+			this.set('content', this.get('yours'));
 		},
 		getall: function() {
-			var all = this.get('allissues');
-			this.set('content', all);
+			this.set('content', this.get('allissues'));
 		}
 	}
 });
