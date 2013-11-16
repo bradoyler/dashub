@@ -25,6 +25,7 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 
 ## HowTo Deploy to Github pages 
 _assumes u have already cloned this repo_
+
 1. `$ git checkout master`
 1. `$ grunt ghpages`
 1. `$ git commit -a -m 'github deploy'` 
