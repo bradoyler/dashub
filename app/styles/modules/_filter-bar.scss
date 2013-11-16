@@ -1,0 +1,9 @@
+.filter-bar {
+  margin-bottom: $base-line-height;
+  @include clearfix;
+}
+
+.filter-bar li {
+  float: left;
+  margin-right: $base-line-height * 2;
+}

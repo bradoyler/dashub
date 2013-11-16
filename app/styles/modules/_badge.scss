@@ -1,11 +1,11 @@
 .badge {
   display: inline-block;
-  color: white;
-  background-color: #999;
+  color: #999;
+  background-color: #EEE;
   text-align: center;
   vertical-align: middle;
   padding: 2px $base-line-height;
-  border-radius: $base-border-radius * 4;
+  border-radius: $base-border-radius;
   font-weight: bolder;
   font-size: 13px;
   line-height: $base-line-height * 3;

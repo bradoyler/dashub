@@ -4,6 +4,7 @@ body {
   font-size: $base-font-size;
   color: $base-font-color;
   margin: $default-grid-gutter-left;
+  background-color: #4a4d4e;
 }
 
 h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, select {
@@ -11,7 +12,6 @@ h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, selec
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  color: #555;
   font-weight: bold;
 }
 

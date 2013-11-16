@@ -1,9 +1,11 @@
 <div class="size1of3 unit cap-width">
 <section class="stream">
   <header class="stream-header">
-    <h3 class="h5">Open Issues </h3>
-    <a class="button" href="#" {{action 'filteryours'}}>Yours {{yours.length}}</a>
-    <a class="button" href="#" {{action 'getall'}}>All {{allissues.length}}</a>
+    <h3 class="h5 stream-title">Open Issues </h3>
+    <ul class="filter-bar">
+      <li><a href="#" {{action 'filteryours'}}>Yours <span class="badge">{{yours.length}}</span></a></li>
+      <li><a href="#" {{action 'getall'}}>All <span class="badge">{{allissues.length}}</span></a></li>
+    </ul>
   </header>
   <div class="card-list">
     {{#each}}
