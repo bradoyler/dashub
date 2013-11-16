@@ -16,7 +16,11 @@ var IndexController = Ember.Controller.extend({
 
 	username: function() {
 		return $.cookie('username');
-	}.property('username')
+	}.property('username'),
+
+	avatar_url: function() {
+		return $.cookie('avatar_url');
+	}.property('avatar_url')
 
 });
 

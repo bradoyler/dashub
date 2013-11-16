@@ -1,6 +1,8 @@
 {{#if username}}
-<div> {{username}}
- <button {{action 'logout'}}> Logout</button>
+<div> 
+  <a href="http://github.com/{{unbound username}}" target="blank">
+  <img src="{{unbound avatar_url}}" height="30px"> {{username}} </a>
+  <button {{action 'logout'}}> Logout</button>
 </div>
 {{/if}}
 

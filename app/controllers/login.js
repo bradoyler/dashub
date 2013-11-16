@@ -19,6 +19,7 @@ var LoginController = Ember.Controller.extend({
 						$.cookie('username', data.login);
 						$.cookie('name', data.name);
 						$.cookie('location', data.location);
+						$.cookie('avatar_url', data.avatar_url);
 
 						self.setProperties({
 							authtoken: encoded,
