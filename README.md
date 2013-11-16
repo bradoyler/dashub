@@ -21,3 +21,13 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 1. `bundle install`
 1. Run `grunt server` to get a local development server running
 1. The app will be running at http://0.0.0.0:8000
+
+
+## HowTo Deploy to Github pages 
+_assumes u have already cloned this repo_
+1. `$ git checkout master`
+1. `$ grunt ghpages`
+1. `$ git commit -a -m 'github deploy'` 
+1. `$ git checkout -b gh-pages`
+1. `$ git merge master`
+1. `$ git push origin gh-pages`
