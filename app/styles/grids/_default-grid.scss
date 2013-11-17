@@ -45,6 +45,16 @@
   padding-right: $default-grid-gutter-right;
 }
 
+.unit-flush {
+  overflow: hidden;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  float: right;
+  padding-left: $default-grid-gutter-left;
+  padding-right: $default-grid-gutter-right;
+}
+
 .size8of8 {
   width: 100%
 }
@@ -193,4 +203,9 @@
   .size1of3.nochange.lastUnit {
     float: none
   }
+}
+
+.container {
+  margin-right: $default-grid-gutter-left;
+  margin-left: $default-grid-gutter-left;
 }
