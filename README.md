@@ -7,7 +7,7 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 * [EAK Documentation Site](http://stefanpenner.github.io/ember-app-kit/)
 
 ## Try it
-- http://bradoyler.github.io/gitflow
+- http://bradoyler.github.io/dashub
 
 ## Get this project running 
 
