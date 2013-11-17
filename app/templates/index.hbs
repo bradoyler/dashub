@@ -1,14 +1,16 @@
+<div class="header-login"> 
 {{#if username}}
-<div> 
   <a href="http://github.com/{{unbound username}}" target="blank">
   <img class="avatar" src="{{unbound avatar_url}}" height="30px"> {{username}} </a>
   <button {{action 'logout'}}> Logout</button>
-</div>
+{{else}}
+	{{#link-to 'login' class='button'}}Login{{/link-to}}
 {{/if}}
+</div>
 
 {{#if reponame}}
 <h4>
-  Dashboard for <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
+  Repository: <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
   {{#link-to 'settings' class='button'}}Change{{/link-to}}
   <a class="button" href="/"> Refresh</a>
 </h4>
@@ -19,12 +21,6 @@
 	  {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
 	{{/unless}}
 {{/if}}
-
- {{#unless username}}
-	<h2>
-	  {{#link-to 'login' class='button'}}Login{{/link-to}}
-	</h2>
- {{/unless}}
  
 {{#if reponame}}
  {{render openissues}}
