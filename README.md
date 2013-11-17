@@ -28,6 +28,7 @@ _assumes u have already cloned this repo_
 
 1. `$ git checkout master`
 1. `$ grunt ghpages`
+1. `$ git add .` 
 1. `$ git commit -a -m 'github deploy'` 
 1. `$ git checkout -b gh-pages`
 1. `$ git merge master`
