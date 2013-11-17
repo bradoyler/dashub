@@ -7,7 +7,7 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 * [EAK Documentation Site](http://stefanpenner.github.io/ember-app-kit/)
 
 ## Try it
-- http://bradoyler.github.io/gitflow
+- http://bradoyler.github.io/dashub
 
 ## Get this project running 
 
@@ -24,11 +24,13 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 
 
 ## HowTo Deploy to Github pages 
-_assumes u have already cloned this repo_
+_assumes u cloned this repo and master is up-to-date_
 
-1. `$ git checkout master`
-1. `$ grunt ghpages`
-1. `$ git commit -a -m 'github deploy'` 
 1. `$ git checkout -b gh-pages`
-1. `$ git merge master`
+      - if branch already exists, delete it via: 
+      - `$ git branch -D gh-pages`
+      - `$ git push origin :gh-pages`
+1. `$ grunt ghpages`
+1. `$ git add .` 
+1. `$ git commit -am 'github deploy'` 
 1. `$ git push origin gh-pages`
