@@ -26,7 +26,10 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 ## HowTo Deploy to Github pages 
 _assumes u cloned this repo and master is up-to-date_
 
-1. `$ git checkout -b gh-pages` (or delete it locally, if already exists: `$ git branch -d gh-pages`)
+1. `$ git checkout -b gh-pages`
+      - if branch already exists, delete it via: 
+      - `$ git branch -D gh-pages`
+      - `$ git push origin :gh-pages`
 1. `$ grunt ghpages`
 1. `$ git add .` 
 1. `$ git commit -am 'github deploy'` 
