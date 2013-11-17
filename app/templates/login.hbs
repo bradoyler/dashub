@@ -7,11 +7,13 @@
     </div>
   </div>
 </header>
-<div class="form-group size1of4 maintain-width">
-  <form>
-    <h2 class="h3">Login</h2>
-    <div>{{input type="text" value=username placeholder="Github username\email"}}</div>
-    <div>{{input type="password" value=password placeholder="Password"}}</div>
-    <button {{action 'login'}}>Login</button>
-  </form>
+<div class="container">
+  <div class="form-group lastUnit size1of4 maintain-width">
+    <form>
+      <h2 class="h3">Login</h2>
+      <div>{{input type="text" class="size1of1" value=username placeholder="Github username\email"}}</div>
+      <div>{{input type="password" class="size1of1" value=password placeholder="Password"}}</div>
+      <button {{action 'login'}}>Login</button>
+    </form>
+  </div>
 </div>

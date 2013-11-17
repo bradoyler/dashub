@@ -4,7 +4,6 @@
   font-weight: bold;
   font-size: $base-font-size;
   text-align: center;
-  vertical-align: middle;
   cursor: pointer;
   background-image: none;
   border: $base-border-width solid transparent;
@@ -21,6 +20,7 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  vertical-align: top;
 }
 
 .button, button {
