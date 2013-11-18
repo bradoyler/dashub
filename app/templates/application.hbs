@@ -1,1 +1,20 @@
+<header class="site-header">
+  <div class="container">
+    <div class="line">
+      <div class="unit">
+        <a href="\"><h1 class="logo">Dashub</h1></a>
+      </div>
+      <div class="unit-flush">
+        {{#if username}}
+          <a href="http://github.com/{{unbound username}}" target="blank">
+            <img class="avatar" src="{{unbound avatar_url}}" height="30px"> {{username}} </a>
+          <button {{action 'logout'}}> Logout</button>
+        {{else}}
+          {{#link-to 'login' class='button'}}Login{{/link-to}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</header>
+
 {{outlet}}
