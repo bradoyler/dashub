@@ -1,33 +1,31 @@
+
+
+{{#if reponame}}
+    <header class="dashboard-header">
+      <div class="container">
+        <div class="line">
+          <div class="unit">
+            <h4>
+              Repository: <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
+              {{#link-to 'settings' class='button'}}Change{{/link-to}}
+              <a class="button" href="/"> Refresh</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </header>
+{{/if}}
+
 {{#if username}}
-<div> 
-  <a href="http://github.com/{{unbound username}}" target="blank">
-  <img class="avatar" src="{{unbound avatar_url}}" height="30px"> {{username}} </a>
-  <button {{action 'logout'}}> Logout</button>
+  {{#unless reponame}}
+    {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
+  {{/unless}}
+{{/if}}
+
+<div class="container">
+  {{#if reponame}}
+    {{render openissues}}
+    {{render pulls}}
+    {{render closedissues}}
+  {{/if}}
 </div>
-{{/if}}
-
-{{#if reponame}}
-<h4>
-  Dashboard for <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
-  {{#link-to 'settings' class='button'}}Change{{/link-to}}
-  <a class="button" href="/"> Refresh</a>
-</h4>
-{{/if}}
-
-{{#if username}}
-	{{#unless reponame}}
-	  {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
-	{{/unless}}
-{{/if}}
-
- {{#unless username}}
-	<h2>
-	  {{#link-to 'login' class='button'}}Login{{/link-to}}
-	</h2>
- {{/unless}}
- 
-{{#if reponame}}
- {{render openissues}}
- {{render pulls}}
- {{render closedissues}}
-{{/if}}

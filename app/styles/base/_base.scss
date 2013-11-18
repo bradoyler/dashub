@@ -3,8 +3,7 @@ body {
   line-height: $base-line-height * 4;
   font-size: $base-font-size;
   color: $base-font-color;
-  margin: $default-grid-gutter-left;
-  background-color: #4a4d4e;
+  background-color: $body-bg-color;
 }
 
 h1, h2, h3, h4, h5, h6, dd, dl, blockquote, p, figure, address, hr, input, select {
@@ -70,7 +69,8 @@ input[type="password"],
 select {
   height: $base-line-height * 5;
   font-size: $base-font-size;
-  width: 100%;
+  padding-left: $base-line-height;
+  padding-right: $base-line-height;
 }
 
 a {

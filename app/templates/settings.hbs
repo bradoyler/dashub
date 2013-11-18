@@ -1,17 +1,11 @@
-<h3>
-    {{#link-to 'index'}} Back {{/link-to}}
-</h3>
 
-<div>
-    <h3>Set your repo</h3>
-    {{input type="text" value=reponame placeholder="Enter Github repo" size="40"}} 
-    <button {{action 'save'}}>Save</button>
-    <span> (ie. bradoyler/dashub) </span> 
-</div>
-
-<div>
-  <h3>Milestones</h3>
-  <ul>
-      <li> Dec 7 - Milestone </li>
-  </ul>
+<div class="container">
+  <div class="form-group lastUnit size2of4 maintain-width">
+    <h3>Set Repository: github.com/</h3>
+    <form>
+      {{input class="size7of8" type="text" value=reponame placeholder="owner/repo"}}
+      <p class="meta"> (ie. bradoyler/dashub) </p>
+      <button {{action 'save'}}>Save</button>
+    </form>
+    </div>
 </div>

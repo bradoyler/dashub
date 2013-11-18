@@ -18,6 +18,7 @@
 // Vendor CSS Libraries (i.e. they actually output styles)
 // ------------------------------------------------
 @import "vendor/eak";
+@import "vendor/octicons";
 
 // Base element styles
 // ------------------------------------------------
@@ -39,6 +40,8 @@
 @import "modules/stream-title";
 @import "modules/filter-bar";
 @import "modules/logo";
+@import "modules/site-header";
+@import "modules/dashboard-header";
 
 // Grids
 // ------------------------------------------------
