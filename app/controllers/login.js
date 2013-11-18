@@ -28,8 +28,7 @@ var LoginController = Ember.Controller.extend({
 
 						self.transitionToRoute('index');
 					}
-					else{
-					
+					else{					
 						self.set('loginmsg', 'error logging in');						
 					}
 					

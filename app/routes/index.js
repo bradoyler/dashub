@@ -3,21 +3,21 @@ import getJSON from 'appkit/utils/get_json';
 var IndexRoute = Ember.Route.extend({
 
 	setupController: function(controller, model) {
-		console.log('##setupController##');
 
-		var authtoken = $.cookie('authtoken');
-		var username = $.cookie('username');
-		var reponame = $.cookie('reponame');
-		this.controller.setProperties({
-			reponame: reponame,
-			username: username,
-			authtoken: authtoken
-		});
+        var userProfile = {
+			reponame: $.cookie('reponame'),
+			username: $.cookie('username'),
+			authtoken: $.cookie('authtoken'),
+			avatar_url: $.cookie('avatar_url')
+		};
 
-		var baseurl = 'https://api.github.com/repos/' + reponame + '/';
+		this.controller.setProperties(userProfile);
+        this.controllerFor('application').setProperties(userProfile);
+	
+		var baseurl = 'https://api.github.com/repos/' + userProfile.reponame + '/';
 		var self = this;
 
-		if (authtoken && reponame) {
+		if (userProfile.authtoken && userProfile.reponame) {
 			getJSON(baseurl + 'issues?sort=updated')
 				.then(function(data) {
 					self.controllerFor('openissues').set('content', data);
@@ -41,12 +41,8 @@ var IndexRoute = Ember.Route.extend({
 		logout: function() {
 			$.removeCookie('authtoken');
 			$.removeCookie('username');
+			this.controllerFor('application').setProperties({username:'', avatar_url:''});
 			this.transitionTo('login');
-		},
-
-		refresh: function() {
-			console.log('## refresh');
-			this.init();
 		}
 	}
 });
