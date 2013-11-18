@@ -1,6 +1,6 @@
-# GitFlow (via Ember App Kit [EAK]) 
+# DasHub (via Ember App Kit [EAK]) 
 
-GitFlow is a tool to make GitHub Issues more visible and manageable to teams using Github for issue tracking 
+DasHub is a tool to make GitHub Issues more visible and manageable to teams using Github for issue tracking 
 
 Ember App Kit (EAK) aims to be the foundation for ambitious web applications built with Ember. It's intended to be used either on its own or as the base scaffolding for projects using [Ember Tools](https://github.com/rpflorence/ember-tools), [generator-ember](https://github.com/yeoman/generator-ember) and a hypothetical official [executable](https://github.com/stefanpenner/ember-cli) at some point in the future.
 
@@ -26,10 +26,8 @@ Ember App Kit (EAK) aims to be the foundation for ambitious web applications bui
 ## HowTo Deploy to Github pages 
 _assumes u cloned this repo and master is up-to-date_
 
-1. `$ git checkout -b gh-pages`
-      - if branch already exists, delete it via: 
-      - `$ git branch -D gh-pages`
-      - `$ git push origin :gh-pages`
+1. `$ git checkout gh-pages`
+1. `$ git merge master` 
 1. `$ grunt ghpages`
 1. `$ git add .` 
 1. `$ git commit -am 'github deploy'` 
