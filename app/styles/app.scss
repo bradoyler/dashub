@@ -1,28 +1,30 @@
 @charset "UTF-8";
 
+// Global config variables, color palette, type, etc
+// ------------------------------------------------
+@import "config";
+
 // Mixin & Function Libraries
 // ------------------------------------------------
 // Vendor
 
-// Yours
-@import "mixins/mixins";
 
-// Global config variables, color palette, type, etc
-// ------------------------------------------------
-@import "config";
+// Yours
+@import "functions/functions";
+@import "mixins/mixins";
 
 // Reset
 // ------------------------------------------------
 @import "resets/reset";
 
-// Vendor CSS Libraries (i.e. they actually output styles)
+// Vendor CSS Libraries (i.e. they actually output css)
 // ------------------------------------------------
 @import "vendor/eak";
 @import "vendor/octicons";
 
-// Base element styles
+// Base styles
 // ------------------------------------------------
-@import "base/base";
+@import "base/elements";
 
 // Modules
 // ------------------------------------------------
