@@ -35,3 +35,18 @@
     *zoom: 1;
   }
 }
+
+// Unitless line-height
+@mixin set-leading($lines, $font-size: $base-font-size) {
+  line-height: (strip-units($base-line-height) * $lines) / strip-units($font-size);
+}
+
+// Vertical rhythm bottom in ems
+@mixin vr-bottom($lines, $font-size: $base-font-size) {
+  margin-bottom: (strip-units($base-line-height) * $lines) / strip-units($font-size) + 0em;
+}
+
+// Vertical rhythm top in ems
+@mixin vr-top($lines, $font-size: $base-font-size) {
+  margin-bottom: (strip-units($base-line-height) * $lines) / strip-units($font-size) + 0em;
+}

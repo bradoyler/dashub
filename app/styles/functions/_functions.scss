@@ -1,0 +1,12 @@
+@function emCalc($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+@function rhythm($lines) {
+  @return ($base-line-height * $lines);
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}

@@ -5,7 +5,7 @@
   font-weight: bolder;
   padding-right: 4px;
   padding-left: 4px;
-  font-size: 11px; // Same font-size as GitHub's labels
-  line-height: $base-line-height * 3;
   color: white;
+  font-size: emCalc(12px);
+  @include set-leading(3, 12px);
 }
