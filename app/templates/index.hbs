@@ -3,11 +3,11 @@
       <div class="container">
         <div class="line">
           <div class="unit">
-            <h4>
+            <h4 class="inline-block">
               Repository: <a {{bind-attr href=repourl}} target="blank">{{reponame}}</a>
-              {{#link-to 'settings' class='button'}}Change{{/link-to}}
-              <a class="button" href=""> Refresh</a>
             </h4>
+            {{#link-to 'settings' class='button'}}Change{{/link-to}}
+            <a class="button" href=""> Refresh</a>
           </div>
         </div>
       </div>
@@ -16,14 +16,25 @@
 
 {{#if username}}
   {{#unless reponame}}
-    {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
+    <div class="container">
+      <div class="line">
+        <h3 class="unit">
+          {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
+        </h3>
+      </div>
+    </div>
   {{/unless}}
 {{/if}}
 
 <div class="container">
-  {{#if reponame}}
+  {{#if username}}
     {{render openissues}}
     {{render pulls}}
     {{render closedissues}}
+  {{else}}
+     <div class="home-screen">
+      <h2> {{#link-to 'login' class='button'}}Sign-in with Github{{/link-to}}</h2>
+      <img class="" style="width:770px;" src="/assets/screen.png">
+     </div>
   {{/if}}
 </div>

@@ -1,10 +1,13 @@
 .card {
-  border: $base-border-width solid $base-border-color;
+  border-color: $base-border-color;
+  border-style: solid;
   border-radius: $base-border-radius;
   margin-bottom: $base-line-height;
   padding-left: $base-line-height;
   padding-right: $base-line-height;
-  padding-top: $base-line-height - $base-border-width;
-  padding-bottom: $base-line-height - $base-border-width;
   background-color: white;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  @include vr-border-top(1px, 1);
+  @include vr-border-bottom(1px, 1);
 }

@@ -1,7 +1,14 @@
 var OpenissuesController = Ember.ArrayController.extend({
 	content: [],
 	allissues: [],
+
+	selectedMilestone: null,
 	
+	milestones: [
+		"v1",
+		"v2"
+	],
+
 	yours: function() {
 
 		var issues = this.get('content');

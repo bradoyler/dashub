@@ -1,3 +1,8 @@
 .stream-header {
-  margin-bottom: $base-line-height * 2;
+  @include vr-margin-bottom(2);
+}
+
+.stream-milestone-select {
+	margin-left: 9px;
+	float: right;
 }

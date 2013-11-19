@@ -35,3 +35,55 @@
     *zoom: 1;
   }
 }
+
+// Unitless line-height
+@mixin set-leading($lines, $font-size: $base-font-size) {
+  line-height: (strip-units($base-line-height) * $lines) / strip-units($font-size);
+}
+
+// Vertical rhythm bottom in ems
+@mixin vr-margin-bottom($lines, $font-size: $base-font-size) {
+  margin-bottom: (strip-units($base-line-height) * $lines) / strip-units($font-size) + 0em;
+}
+
+// Vertical rhythm top in ems
+@mixin vr-margin-top($lines, $font-size: $base-font-size) {
+  margin-top: (strip-units($base-line-height) * $lines) / strip-units($font-size) + 0em;
+}
+
+// Vertical rhythm bottom in ems
+@mixin vr-padding-bottom($lines, $font-size: $base-font-size) {
+  padding-bottom: (strip-units($base-line-height) * $lines) / strip-units($font-size) + 0em;
+}
+
+// Vertical rhythm top in ems
+@mixin vr-padding-top($lines, $font-size: $base-font-size) {
+  padding-top: (strip-units($base-line-height) * $lines) / strip-units($font-size) + 0em;
+}
+
+@mixin vr-border-top($border-width, $padding-lines) {
+  border-top-width: $border-width;
+  $padding-amount: ($base-line-height * $padding-lines) - $border-width;
+  padding-top: emCalc($padding-amount);
+}
+
+@mixin vr-border-bottom($border-width, $padding-lines) {
+  border-bottom-width: $border-width;
+  $padding-amount: ($base-line-height * $padding-lines) - $border-width;
+  padding-bottom: emCalc($padding-amount);
+}
+
+// Set the font size and the number of base line-height for leading
+@mixin set-type($font-size: $base-font-size, $leading-lines: $base-line-height) {
+  font-size: emCalc($font-size);// Converts font size set in Pixels to Ems
+  @include set-leading($leading-lines, $font-size);// Sets a unitless line-height based on the number of lines of base-line-height
+}
+
+// Vendor prefix
+@mixin vendor($property, $value...){
+  -webkit-#{$property}:$value;
+  -moz-#{$property}:$value;
+  -ms-#{$property}:$value;
+  -o-#{$property}:$value;
+  #{$property}:$value;
+}

@@ -1,5 +1,5 @@
 .issue-number {
   display: block;
-  margin-bottom: $base-line-height;
   float: left;
+  @include vr-margin-bottom(1);
 }
