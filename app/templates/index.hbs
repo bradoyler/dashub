@@ -18,18 +18,23 @@
   {{#unless reponame}}
     <div class="container">
       <div class="line">
-        <div class="unit">
+        <h3 class="unit">
           {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
-        </div>
+        </h3>
       </div>
     </div>
   {{/unless}}
 {{/if}}
 
 <div class="container">
-  {{#if reponame}}
+  {{#if username}}
     {{render openissues}}
     {{render pulls}}
     {{render closedissues}}
+  {{else}}
+     <div class="home-screen">
+      <h2> {{#link-to 'login' class='button'}}Sign-in with Github{{/link-to}}</h2>
+      <img class="" style="width:770px;" src="/assets/screen.png">
+     </div>
   {{/if}}
 </div>
