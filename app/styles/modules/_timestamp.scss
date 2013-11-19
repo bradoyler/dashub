@@ -1,4 +1,5 @@
 .timestamp {
   float: right;
   line-height: $base-line-height * 4;
+  @include set-leading(4, 12px);
 }

@@ -1,19 +1,14 @@
 .button-txt {
   display: inline-block;
-  margin-bottom: 0;
   font-weight: bold;
-  font-size: $base-font-size;
   text-align: center;
   cursor: pointer;
   background-image: none;
-  border: $base-border-width solid transparent;
+  border-style: solid;
+  border-color: transparent;
   white-space: nowrap;
-  padding: $base-line-height $base-line-height;
-  padding-top: $base-line-height - $base-border-width;
-  padding-bottom: $base-line-height - $base-border-width;
   padding-right: $base-line-height;
   padding-left: $base-line-height;
-  line-height: $base-line-height * 3;
   border-radius: $base-border-radius;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -21,11 +16,15 @@
   -o-user-select: none;
   user-select: none;
   vertical-align: top;
+  margin-bottom: 0;
+  @include set-leading(3);
+  @include vr-border-top(1px, 1);
+  @include vr-border-bottom(1px, 1)
 }
 
 .button, button {
   @extend .button-txt;
   background-color: #80d263;
-  @include link-colors(#fff, #fff, #fff, #fff, #fff);
   text-decoration: none;
+  @include link-colors(#fff, #fff, #fff, #fff, #fff);
 }

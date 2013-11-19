@@ -1,13 +1,19 @@
+*,
+*:before,
+*:after {
+  @include vendor(box-sizing, border-box);
+}
+
 body {
   font-family: $sans-font-stack;
-  @include set-leading(4);
-  font-size: $base-font-size;
   color: $base-font-color;
   background-color: $body-bg-color;
+  font-size: (strip-units($base-font-size) / 16 * 100) + 0%; // Sets the body font-size to base font size and converts that to a percentage
+  @include set-leading(4); // Sets the line-height to 4 units of the base-line-height
 }
 
 dd, dl, blockquote, p, figure, address, hr, input, select {
-  @include vr-bottom(2);
+  @include vr-margin-bottom(2);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -15,52 +21,44 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: emCalc(40px);
-  @include set-leading(8, 40px);
-  @include vr-bottom(2, 40px);
+  @include set-type(40px, 8);
+  @include vr-margin-bottom(2, 40px);
 }
 
 h2, .h2 {
-  font-size: emCalc(40px);
-  @include set-leading(8, 40px);
-  @include vr-bottom(2, 40px);
+  @include set-type(40px, 8);
+  @include vr-margin-bottom(2, 40px);
 }
 
 h3, .h3 {
-  font-size: emCalc(26px);
-  @include set-leading(6, 26px);
-  @include vr-bottom(2, 26px);
+  @include set-type(26px, 6);
+  @include vr-margin-bottom(2, 26px);
 }
 
 h4, .h4 {
-  font-size: emCalc(18px);
-  @include set-leading(5, 18px);
-  @include vr-bottom(2, 18px);
+  @include set-type(18px, 5);
+  @include vr-margin-bottom(2, 18px);
 }
 
 h5, .h5 {
-  font-size: emCalc(18px);
-  @include set-leading(5, 18px);
-  @include vr-bottom(2, 18px);
+  @include set-type(18px, 5);
+  @include vr-margin-bottom(2, 18px);
 }
 
 h6, .h6 {
-  font-size: emCalc(15px);
-  @include set-leading(4, 15px);
-  @include vr-bottom(2, 15px);
+  @include set-type(15px, 4);
+  @include vr-margin-bottom(2, 15px);
 }
 
 p, .p {
   max-width: 550px;
-  font-size: emCalc(15px);
-  @include set-leading(4, 15px);
-  @include vr-bottom(2, 15px);
+  @include set-type(15px, 4);
+  @include vr-margin-bottom(2, 15px);
 }
 
 small, .meta {
-  font-size: emCalc(12px);
-  @include set-leading(3, 12px);
-  @include vr-bottom(2, 12px);
+  @include set-type(12px, 3);
+  @include vr-margin-bottom(2, 12px);
 }
 
 button,
@@ -103,4 +101,8 @@ fieldset {
   padding-top: $base-line-height - $base-border-width;
   padding-bottom: $base-line-height - $base-border-width;
   border: $base-border-width solid $base-border-color;
+}
+
+.inline-block {
+  display: inline-block;
 }

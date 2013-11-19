@@ -1,5 +1,5 @@
 .filter-bar {
-  margin-bottom: $base-line-height;
+  @include vr-margin-bottom(1);
   @include clearfix;
 }
 

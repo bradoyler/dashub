@@ -7,6 +7,5 @@
   padding: 2px $base-line-height;
   border-radius: $base-border-radius;
   font-weight: bolder;
-  font-size: 13px;
-  line-height: $base-line-height * 3;
+  @include set-type(13px, 3);
 }

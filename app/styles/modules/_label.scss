@@ -6,6 +6,5 @@
   padding-right: 4px;
   padding-left: 4px;
   color: white;
-  font-size: emCalc(12px);
-  @include set-leading(3, 12px);
+  @include set-type(12px, 3);
 }

@@ -1,6 +1,6 @@
 .site-header {
   background-color: #2f3132;
-  padding-top: $base-line-height * 2;
-  padding-bottom: $base-line-height * 2;
-  margin-bottom: $base-line-height * 2;
+  @include vr-padding-top(2);
+  @include vr-padding-bottom(2);
+  @include vr-margin-bottom(2)
 }
