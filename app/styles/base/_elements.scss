@@ -51,7 +51,6 @@ h6, .h6 {
 }
 
 p, .p {
-  max-width: 550px;
   @include set-type(15px, 4);
   @include vr-margin-bottom(2, 15px);
 }
