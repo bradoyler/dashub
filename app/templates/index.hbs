@@ -32,10 +32,10 @@
     {{render pulls}}
     {{render closedissues}}
   {{else}}
-    <div class="center-unit size1of2 intro">
+    <div class="center-unit size8of8 intro">
         <h2>Sign-in with GitHub</h2>
-        {{#link-to 'login' class='button'}}Sign-in{{/link-to}}
-        <!--<img src="/assets/screen.png">-->
+        <p>{{#link-to 'login' class='button'}}Sign-in{{/link-to}}</p>
+        <p><img class="intro-image" src="/assets/screen.png"></p>
     </div>
   {{/if}}
 </div>
