@@ -1,4 +1,4 @@
-.group, .lastGroup {
+.group, .last-group {
   overflow: hidden;
   -moz-background-clip: padding-box !important;
   -webkit-background-clip: padding-box !important;
@@ -6,7 +6,7 @@
   float: left
 }
 
-.lastGroup {
+.last-group {
   float: none;
   width: auto
 }
@@ -24,7 +24,7 @@
   clear: both
 }
 
-.lastUnit {
+.last-unit {
   overflow: hidden;
   -moz-background-clip: padding-box !important;
   -webkit-background-clip: padding-box !important;
@@ -152,7 +152,7 @@
     float: left
   }
 
-  .size1of4.nochange.lastUnit {
+  .size1of4.nochange.last-unit {
     float: none
   }
 }
@@ -166,7 +166,7 @@
     max-width: none;
   }
 
-  .size1of2.unit, .size1of3.unit, .size2of3.unit, .size1of4.unit, .size2of4.unit, .size3of4.unit, .size2of8.unit, .size3of8.unit, .size4of8.unit, .size5of8.unit, .size6of8.unit, .size7of8.unit, .size1of2.lastUnit, .size1of3.lastUnit, .size2of3.lastUnit, .size1of4.lastUnit, .size2of4.lastUnit, .size3of4.lastUnit, .size2of8.lastUnit, .size3of8.lastUnit, .size4of8.lastUnit, .size5of8.lastUnit, .size6of8.lastUnit, .size7of8.lastUnit {
+  .size1of2.unit, .size1of3.unit, .size2of3.unit, .size1of4.unit, .size2of4.unit, .size3of4.unit, .size2of8.unit, .size3of8.unit, .size4of8.unit, .size5of8.unit, .size6of8.unit, .size7of8.unit, .size1of2.last-unit, .size1of3.last-unit, .size2of3.last-unit, .size1of4.last-unit, .size2of4.last-unit, .size3of4.last-unit, .size2of8.last-unit, .size3of8.last-unit, .size4of8.last-unit, .size5of8.last-unit, .size6of8.last-unit, .size7of8.last-unit {
     float: none;
     display: block
   }
@@ -175,7 +175,7 @@
     width: 50%
   }
 
-  .size1of8.unit, .size1of8.lastUnit {
+  .size1of8.unit, .size1of8.last-unit {
     float: none;
     display: block
   }
@@ -188,7 +188,7 @@
     float: left
   }
 
-  .size1of2.nochange.lastUnit {
+  .size1of2.nochange.last-unit {
     float: none
   }
 
@@ -200,7 +200,7 @@
     float: left
   }
 
-  .size1of3.nochange.lastUnit {
+  .size1of3.nochange.last-unit {
     float: none
   }
 }
