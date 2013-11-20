@@ -18,9 +18,9 @@
   {{#unless reponame}}
     <div class="container">
       <div class="line">
-        <h3 class="unit">
-          {{#link-to 'settings' class='button'}}Set Repo{{/link-to}}
-        </h3>
+        <div class="unit">
+          <p>{{#link-to 'settings' class='button'}}Set Repo{{/link-to}}</p>
+        </div>
       </div>
     </div>
   {{/unless}}
@@ -32,9 +32,10 @@
     {{render pulls}}
     {{render closedissues}}
   {{else}}
-     <div class="home-screen">
-      <h2> {{#link-to 'login' class='button'}}Sign-in with Github{{/link-to}}</h2>
-      <img class="" style="width:770px;" src="/assets/screen.png">
-     </div>
+    <div class="center-unit size1of2 intro">
+        <h2>Sign-in with GitHub</h2>
+        {{#link-to 'login' class='button'}}Sign-in{{/link-to}}
+        <!--<img src="/assets/screen.png">-->
+    </div>
   {{/if}}
 </div>
