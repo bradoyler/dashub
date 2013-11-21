@@ -1,3 +1,5 @@
+// a generic wrapper for getting json 
+
 function getJSON(url, params) {
   var args = {
     beforeSend: function(xhr) {

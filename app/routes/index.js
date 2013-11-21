@@ -1,4 +1,4 @@
-import getJSON from 'appkit/utils/get_json';
+import githubIssues from 'appkit/utils/githubIssues';
 
 var IndexRoute = Ember.Route.extend({
 
@@ -14,22 +14,28 @@ var IndexRoute = Ember.Route.extend({
 		this.controller.setProperties(userProfile);
         this.controllerFor('application').setProperties(userProfile);
 	
-		var baseurl = 'https://api.github.com/repos/' + userProfile.reponame + '/';
 		var self = this;
 
 		if (userProfile.authtoken && userProfile.reponame) {
-			getJSON(baseurl + 'issues?sort=updated')
+
+            var openparams = {state:'open',sort:'updated'};
+			githubIssues.find(userProfile.reponame, openparams)
 				.then(function(data) {
 					self.controllerFor('openissues').set('content', data);
 					self.controllerFor('openissues').set('allissues', data);
-				});
+					
+					var pulls = data.filter(function(item, index, self) {	
+						if (item.pull_request.html_url) {
+							return true;
+						}
+					});
 
-			getJSON(baseurl + 'pulls?sort=updated&direction=desc')
-				.then(function(data) {
-					self.controllerFor('pulls').set('content', data);
+					self.controllerFor('pulls').set('content', pulls);
+                    
 				});
-
-			getJSON(baseurl + 'issues?state=closed&sort=updated')
+            
+            var closedparams = {state:'closed', sort:'updated'};
+			githubIssues.find(userProfile.reponame, closedparams)
 				.then(function(data) {
 					self.controllerFor('closedissues').set('content', data);
 					self.controllerFor('closedissues').set('allissues', data);
