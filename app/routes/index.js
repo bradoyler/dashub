@@ -26,12 +26,17 @@ var IndexRoute = Ember.Route.extend({
 			this.controllerFor('openissues').set('content', openissues);
 			this.controllerFor('openissues').set('allissues', openissues);
 
-			var pulls = openissues.filter(function(item, index, self) {	
-				if (item.pull_request.html_url) {
-					return true;
-				}
-			});
+			//console.log('$$$$',openissues);
 
+			// var pulls = openissues.filter(function(item, index, self) {	
+
+			// 	console.log('$$',item);
+			// 	if (item._data.pull_request.html_url) {
+			// 		return true;
+			// 	}
+			// });
+
+			var pulls = this.controllerFor('openissues').get('openpulls');
 			this.controllerFor('pulls').set('content', pulls);
 
 		}

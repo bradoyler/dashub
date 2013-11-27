@@ -9,16 +9,31 @@ var OpenissuesController = Ember.ArrayController.extend({
 		"v2"
 	],
 
+	openpulls: function() {
+        var openissues = this.get('content');
+       // console.log('$open ',openissues);
+		var pulls = openissues.filter(function(item, index, self) {
+			console.log('$$pulls', item);
+			if (item._data.pull_request.html_url) {
+				return true;
+			}
+		});
+
+	    return pulls;
+
+    }.property('content.[]'),
+	
 	yours: function() {
 
 		var issues = this.get('content');
 		var username = $.cookie('username');
 
 		var myissues = issues.filter(function(item, index, self) {
-			var userlogin = item.user.login;
+		//	console.log('$$my', item);
+			var userlogin = item._data.user.login;
 			var assignee = '';
-			if (item.assignee) {
-				assignee = item.assignee.login;
+			if (item._data.assignee) {
+				assignee = item._data.assignee.login;
 			}
 
 			if (userlogin === username) {
