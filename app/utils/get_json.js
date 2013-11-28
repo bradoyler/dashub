@@ -4,7 +4,6 @@ function getJSON(url, params) {
   var args = {
     beforeSend: function(xhr) {
 
-      // var encoded =  window.base64.encode("brad@gmail.com:ppppppp");
       var encoded = $.cookie('authtoken') || '';
       xhr.setRequestHeader("Authorization", "Basic " + encoded);
       xhr.setRequestHeader('Accept', 'application/vnd.github.raw+json');

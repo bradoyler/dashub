@@ -1,4 +1,3 @@
-import githubIssues from 'appkit/utils/githubIssues';
 
 var IndexRoute = Ember.Route.extend({
 

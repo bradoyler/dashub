@@ -15,7 +15,7 @@ var SettingsController = Ember.Controller.extend({
 			$.cookie('reponame', repo);
 			this.set('reposet', true);
 			console.log('save', repo);
-			this.transitionToRoute('index');
+			window.location.href="/";
 		},
 
 		resetrepo: function() {

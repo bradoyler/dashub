@@ -1,9 +1,10 @@
 //var FixtureAdapter = DS.FixtureAdapter.extend();
 
 var token = $.cookie('authtoken') || '';  
+var reponame = $.cookie('reponame') || '';
 
 var ApplicationAdapter = DS.RESTAdapter.extend({
-    namespace: 'repos/bradoyler/dashub',
+    namespace: 'repos/'+ reponame,
     host: 'https://api.github.com',
     headers: { 
      'Accept': 'application/vnd.github.raw+json',
