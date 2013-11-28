@@ -1,4 +1,3 @@
-import githubIssues from 'appkit/utils/githubIssues';
 
 var IndexRoute = Ember.Route.extend({
 
@@ -13,33 +12,25 @@ var IndexRoute = Ember.Route.extend({
 
 		this.controller.setProperties(userProfile);
         this.controllerFor('application').setProperties(userProfile);
-	
-		var self = this;
 
 		if (userProfile.authtoken && userProfile.reponame) {
 
-            var openparams = {state:'open',sort:'updated'};
-			githubIssues.find(userProfile.reponame, openparams)
-				.then(function(data) {
-					self.controllerFor('openissues').set('content', data);
-					self.controllerFor('openissues').set('allissues', data);
-					
-					var pulls = data.filter(function(item, index, self) {	
-						if (item.pull_request.html_url) {
-							return true;
-						}
-					});
+			var closedissues = this.store.find('issue',{state:'closed', sort:'updated'});
+			this.controllerFor('closedissues').set('content', closedissues);
+			this.controllerFor('closedissues').set('allissues', closedissues);
 
-					self.controllerFor('pulls').set('content', pulls);
-                    
+			var openissues = this.store.find('issue',{state:'open',sort:'updated'});
+			this.controllerFor('openissues').set('content', openissues);
+			this.controllerFor('openissues').set('allissues', openissues);
+
+			var pulls=this.get('store').filter('issue', function(item)
+				{
+					if(item.get('pull_request.html_url') && item.get('state')==='open'){
+						return true;
+					}
 				});
-            
-            var closedparams = {state:'closed', sort:'updated'};
-			githubIssues.find(userProfile.reponame, closedparams)
-				.then(function(data) {
-					self.controllerFor('closedissues').set('content', data);
-					self.controllerFor('closedissues').set('allissues', data);
-				});
+
+			this.controllerFor('pulls').set('content', pulls);
 		}
 	},
 

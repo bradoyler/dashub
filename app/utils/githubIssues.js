@@ -1,5 +1,6 @@
 import ajax from 'appkit/utils/ajax';
 
+// no longer used, but serves as example if not using ember-data
 var promises = {};
 var githubIssues = {
   find: function (reponame, params) {

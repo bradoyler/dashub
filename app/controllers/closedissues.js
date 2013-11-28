@@ -7,10 +7,11 @@ var ClosedissuesController = Ember.ArrayController.extend({
 			var username = $.cookie('username');
 
 			var myissues = issues.filter(function(item, index, self) {
-				var userlogin = item.user.login;
+
+				var userlogin = item.get('user.login');
 				var assignee = '';
 				if (item.assignee) {
-					assignee = item.assignee.login;
+					assignee = item.get('assignee.login');
 				}
 
 				if (userlogin === username) {
