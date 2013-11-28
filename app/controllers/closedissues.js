@@ -8,10 +8,10 @@ var ClosedissuesController = Ember.ArrayController.extend({
 
 			var myissues = issues.filter(function(item, index, self) {
 
-				var userlogin = item._data.user.login;
+				var userlogin = item.get('user.login');
 				var assignee = '';
 				if (item.assignee) {
-					assignee = item._data.assignee.login;
+					assignee = item.get('assignee.login');
 				}
 
 				if (userlogin === username) {
