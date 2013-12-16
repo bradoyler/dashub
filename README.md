@@ -38,3 +38,7 @@ _assumes u cloned this repo and master is up-to-date_
 
 1. Submit a Pull request (we won't judge you)
 1. Star this repo. It helps encourage more contributions. :clap:
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bradoyler/dashub/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
