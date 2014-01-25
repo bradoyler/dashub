@@ -1,5 +1,5 @@
 # DasHub 
-#### a heads-up for agile teams using github issues
+#### a heads-up display for agile teams using github issues
 
 DasHub is a tool to make GitHub Issues more visible and manageable to teams using Github for issue tracking 
 
